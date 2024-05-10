@@ -1,4 +1,3 @@
-//ResultScreen
 import FormContainer from "../components/FormContainer";
 import { Card, Button } from "react-bootstrap";
 import { FaRegCheckCircle } from "react-icons/fa";

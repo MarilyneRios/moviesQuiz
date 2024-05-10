@@ -1,4 +1,3 @@
-//Quit btn
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { IoCloseCircleOutline } from "react-icons/io5";
 

@@ -1,4 +1,3 @@
-//AboutScreen
 import { Card } from "react-bootstrap";
 import FormContainer from "../components/FormContainer";
 

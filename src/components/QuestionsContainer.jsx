@@ -19,27 +19,11 @@ const QuestionsContainer = () => {
 
   const navigate = useNavigate();
 
-  // 1Réinitialiser le score à zéro lorsque le quiz commence
+  // Réinitialiser le score à zéro lorsque le quiz commence
   useEffect(() => {
         setScore(0);
   }, []);
-/*
-  const handleAnswerClick = (answer) => {
-    setSelectedAnswer(answer);
-    if (answer === questions[currentQuestion].correctAnswer) {
-      setScore((prevScore) => prevScore + 1);
-    }
 
-    // Passer à la question suivante immédiatement après le clic
-    if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion((prevQuestion) => prevQuestion + 1);
-      setSelectedAnswer(null); 
-
-    } else {
-      navigate('/result'); 
-    }
-  };
-*/
   const handleAnswerClick = (answer) => {
     setSelectedAnswer(answer);
     if (answer === questions[currentQuestion].correctAnswer) {
@@ -54,56 +38,13 @@ const QuestionsContainer = () => {
       } else {
         navigate('/result'); 
       }
-    }, 1000); // Attendre 1 seconde avant de passer à la question suivante
+    }, 1000); // Attendre 1 seconde avant de passer à la question suivante pour voir la couleur de la réponse
   };
   
-/*  
+
 // Gestion du décompte du temps
 useEffect(() => {
-    // Réinitialiser le temps restant chaque fois que la question change
-    setTimeLeft(30);
-
-  const countdown = setInterval(() => {
-    setTimeLeft((prevTimeLeft) => {
-      if (prevTimeLeft > 0) {
-        return prevTimeLeft - 1;
-      } else {
-         // Si le temps restant est égal à 0, passer à la question suivante
-        if (currentQuestion < questions.length - 1) {
-          setSelectedAnswer(questions[currentQuestion].correctAnswer);//
-          setCurrentQuestion((prevQuestion) => prevQuestion + 1);
-          setSelectedAnswer(null);
-        } else {
-          navigate('/result');
-        }
-        return 0;
-      }
-    });
-  }, 1000);
-
-  return () => {
-    clearInterval(countdown);
-  };
-}, [currentQuestion]);
-
-// Gestion du passage à la question suivante
-useEffect(() => {
-  if (timeLeft === 0) {
-    if (currentQuestion < questions.length - 1) {
-      setSelectedAnswer(questions[currentQuestion].correctAnswer);
-
-      setCurrentQuestion((prevQuestion) => prevQuestion + 1);
-      setSelectedAnswer(null);
-      setTimeLeft(30);
-    } else {
-      navigate('/result');
-    }
-  }
-}, [timeLeft, currentQuestion]);
-*/  
-// Gestion du décompte du temps
-useEffect(() => {
-  console.log('Setting time left to 30');
+  //console.log('Setting time left to 30');
   setTimeLeft(30); 
 
   const countdown = setInterval(() => {
@@ -113,12 +54,12 @@ useEffect(() => {
       } else {
         clearInterval(countdown); // Arrêter le décompte du temps
         if (currentQuestion < questions.length - 1) {
-          console.log('Time is up, moving to next question');
+          //console.log('Time is up, moving to next question');
           setSelectedAnswer(questions[currentQuestion].correctAnswer);
           setCurrentQuestion((prevQuestion) => prevQuestion + 1);
           setSelectedAnswer(null);
         } else {
-          console.log('Time is up, navigating to result'); 
+          //console.log('Time is up, navigating to result'); 
           navigate('/result');
         }
         return 0;
@@ -135,13 +76,13 @@ useEffect(() => {
 useEffect(() => {
   if (timeLeft === 0) {
     if (currentQuestion < questions.length - 1) {
-      console.log('Time left is 0, moving to next question'); 
+     // console.log('Time left is 0, moving to next question'); 
       setSelectedAnswer(questions[currentQuestion].correctAnswer);
       setCurrentQuestion((prevQuestion) => prevQuestion + 1);
       setSelectedAnswer(null);
       setTimeLeft(30);
     } else {
-      console.log('Time left is 0, navigating to result'); 
+     // console.log('Time left is 0, navigating to result'); 
       navigate('/result');
     }
   }

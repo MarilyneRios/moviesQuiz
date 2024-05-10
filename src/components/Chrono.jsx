@@ -1,4 +1,3 @@
-//chrono
 import { useState, useEffect } from "react";
 
 const Chrono = ({ timeLeft }) => {

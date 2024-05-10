@@ -1,4 +1,3 @@
-// App.jsx
 import bgBlue from './assets/bg-bluegold.png'
 import {Outlet} from 'react-router-dom'
 import { Container } from 'react-bootstrap';

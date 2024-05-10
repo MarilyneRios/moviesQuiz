@@ -1,5 +1,4 @@
 
-
 const Score = ({ score }) => {
     
   return (
