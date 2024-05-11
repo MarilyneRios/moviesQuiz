@@ -119,13 +119,12 @@ const QuestionsContainer = () => {
                 src={questions[currentQuestion].imageUrl}
                 alt="Question"
                 className="rounded mb-3 border w-75"
-                style={{ maxHeight: "500px", objectFit: "cover" }}
+                style={{ maxHeight: "350px", objectFit: "cover" }}
               />
             ) : (
               <iframe
             
                 className="mb-3 rounded  w-75 h-auto h-md-75"
-                
                 src={questions[currentQuestion].videoUrl}
                 title="YouTube video player"
                 frameborder="0"
