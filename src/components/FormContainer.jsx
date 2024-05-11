@@ -3,13 +3,16 @@ import '../App.css';
 
 const FormContainer = ({ children }) => {
   return (
-    <Container className='d-flex justify-content-center align-items-center' style={{ minHeight: '90vh', margin: '0', padding: '0', minWidth: '100vw' }}>
-      <Row >
-        <Col xs={4} sm={6} md={8} lg={12} className='card p-2 custom-bg' style={{ minWidth: '200px', maxWidth: '1000px',  }}>
+    <div className=" p-5 my-5">
+    <Container className='d-flex justify-content-center ' >
+      <Row className="justify-content-md-center my-5" >
+        <Col xs={12} sm={8} md={6} lg={4} className='card p-2 custom-bg' style={{ minWidth: '200px', maxWidth: '1000px',  }}>
           {children}
         </Col>
       </Row>
     </Container>
+    </div>
+
   );
 };
 

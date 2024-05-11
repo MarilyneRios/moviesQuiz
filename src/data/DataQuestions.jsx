@@ -23,7 +23,7 @@ const questions = [
         correctAnswer: '4'
       },
       {
-        question: ` Sous la direction de quel réalisateur joue-t-il dans "Good Morning Vietnam" ?`,
+        question: ` Qui est le réalisateur joue-t-il dans "Good Morning Vietnam" ?`,
         imageUrl:'',
         videoUrl:'https://www.youtube.com/embed/AwSra5p8MDw?si=K-UcqTTh3Bll_L5w',
         answers: ['Barry Levinson', 'Steven Spielberg', 'Gary Marshall', ],

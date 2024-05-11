@@ -4,7 +4,7 @@ import FormContainer from "../components/FormContainer";
 const AboutScreen = () => {
   return (
     <FormContainer>
-      <Card className="p-5 d-flex flex-column align-items-center bg-light">
+      <Card className="p-1 p-md-5 d-flex flex-column align-items-center bg-light">
         <Card.Body className="text-center">
           <Card.Title className="mb-3 fs-3 text-warning">La pause quiz</Card.Title>
           <Card.Text className="py-3 ">
